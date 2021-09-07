@@ -11,7 +11,18 @@ class Carrera{
         let Roberto = new Ficha;
         while(Juan.getPosicion()<100 && Roberto.getPosicion()<100){
             Juan.dado();
+            let casilla = this.serpienteOEscalera(Juan.getPosicion());
+            if(casilla !== 0){
+                Juan.setPosicion(casilla)
+                console.log("mocos!");
+            }
+
             Roberto.dado();
+            casilla = this.serpienteOEscalera(Roberto.getPosicion());
+            if(casilla !== 0){
+                Roberto.setPosicion(casilla)
+                console.log("mocos!");
+            }
         }
         if(Juan.getPosicion()<100){
             return "Roberto Gana!"
@@ -26,63 +37,60 @@ class Carrera{
         switch (casilla){
             //Colocando las escaleras
             case 2:
-                //subir a n la ficha
+                return 10;
             break;
             case 7:
-                //subir a n la ficha
+                return 11;
             break;
             case 19:
-                //subir a n la ficha
+                return 21;
             break;
             case 23:
-                //subir a n la ficha
+                return 24;
             break;
             case 44:
-                //subir a n la ficha
+                return 59;
             break;
             case 51:
-                //subir a n la ficha
+                return 53;
             break;
             case 67:
-                //subir a n la ficha
+                return 71;
             break;
             case 76:
-                //subir a n la ficha
+                return 98;
             break;
             case 88:
-                //subir a n la ficha
+                return 90;
             break;
 
             //colocando serpientes
             case 99:
-                //bajar a n la ficha
+                return 1;
             break;
             case 87:
-                //bajar a n la ficha
+                return 50;
             break;
             case 70:
-                //bajar a n la ficha
+                return 60;
             break;
             case 61:
-                //bajar a n la ficha
+                return 39;
             break;
             case 52:
-                //bajar a n la ficha
+                return 50;
             break;
             case 40:
-                //bajar a n la ficha
+                return 0;
             break;
             case 17:
-                //bajar a n la ficha
+                return 16;
             break;
             case 13:
-                //bajar a n la ficha
-            break;
-            case 10:
-                //bajar a n la ficha
+                return 5;
             break;
             default:
-                return;
+                return 0;
                 break;
         }
     }
