@@ -3,9 +3,16 @@ import Tablero from "./tablero.js";
 
 class Carrera{
     constructor(){
-        let Juan = new Ficha;
-        let Roberto = new Ficha;
+        this.Juan = new Ficha;
+        this.Roberto = new Ficha;
 
+    }
+
+    dado(){
+        return Math.floor(Math.random()*6)+1;
+    }
+
+    aCorrer(){
     }
 }
 new Carrera;
