@@ -1,3 +1,4 @@
+import Ficha from "./ficha.js";
 export default class Tablero{
     constructor(SerpienteoEscalera){
         switch (SerpienteoEscalera){
@@ -58,6 +59,8 @@ export default class Tablero{
             case 10:
                 //bajar a n la ficha
             break;
+            default:
+
         }
     }
 }

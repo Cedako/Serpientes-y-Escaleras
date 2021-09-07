@@ -3,16 +3,25 @@ import Tablero from "./tablero.js";
 
 class Carrera{
     constructor(){
-        this.Juan = new Ficha;
-        this.Roberto = new Ficha;
-
+        console.log(this.aCorrer());
+        //console.log(this.dado());
     }
 
-    dado(){
-        return Math.floor(Math.random()*6)+1;
-    }
 
     aCorrer(){
+        let Juan = new Ficha;
+        let Roberto = new Ficha;
+        while(Juan.getPosicion()<100 && Roberto.getPosicion()<100){
+            Juan.dado();
+            Roberto.dado();
+        }
+        if(Juan.getPosicion()<100){
+            return "Roberto Gana!"
+        }
+        else{
+            return "Juan Gana!"
+        }
+        
     }
 }
 new Carrera;
