@@ -6,6 +6,11 @@ export default class Ficha{
     getPosicion(){
         return this.posicion;
     }
+
+    setPosicion(posicion){
+        this.posicion = posicion
+    }
+    
     dado(){
         let dado = Math.floor(Math.random()*6)+1;
         this.posicion+=dado
