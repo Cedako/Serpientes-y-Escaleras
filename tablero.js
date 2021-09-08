@@ -1,6 +1,6 @@
 import Ficha from "./ficha.js";
 
-class Carrera{
+class Tablero{
     constructor(){
         console.log(this.aCorrer());
         //console.log(this.dado());
@@ -110,4 +110,4 @@ class Carrera{
         }
     }
 }
-new Carrera;
+new Tablero;
